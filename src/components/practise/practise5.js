@@ -1,19 +1,12 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import './practise.css'
 
 const ShortCircuit = () => {
 
-    const [text, setText] = useState('')
-    const firstValue = text || 'hello world';
-    const secondValue = text && 'hello world';
+    const text = useState('')
     const [isError, setIsError] = useState(false)
 
     return (
-        // <div>
-        //     <h1>{firstValue}</h1>
-        //     <h1>Vaue : {secondValue} </h1>
-        // </div>
-
         <div className="container">
             <h2> {text || 'Abzedizo'} </h2>
             <button onClick={()=> setIsError(!isError)} className="btn btn-success">Toggle Error</button>

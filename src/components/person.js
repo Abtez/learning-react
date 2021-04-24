@@ -8,10 +8,10 @@ const Person = () => {
     const [name, setName] = React.useState('default name');
     const {id} = useParams();
 
-    React.useEffect(() => {
+    React.useEffect((id) => {
         const newPerson = data.find((person) => person.id === parseInt(id));
         setName(newPerson.name)
-    },[])
+    },[id])
 
     return(
         <div>

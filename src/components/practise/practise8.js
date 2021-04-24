@@ -1,9 +1,9 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import './practise.css'
 
 const MultipleInputs = () => {
 
-    const [person,setPerson] = useState({firstName:'',secondName:'',age:'',email:''})
+    const [person,setPerson] = useState({firstName1:'',secondName:'',age:'',email1:''})
     const [people, setPeople] = useState([])
 
     const handleOnchange = (e) => {
@@ -14,10 +14,10 @@ const MultipleInputs = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (person.firstName && person.secondName && person.age && person.email){
+        if (person.firstName1 && person.secondName && person.age && person.email1){
             const newPerson = {...person, id: new Date().getTime().toString()}
             setPeople([...people, newPerson])
-            setPerson({firstName:'', secondName:'', age:'',email:''})
+            setPerson({firstName1:'', secondName:'', age:'',email1:''})
         }         
     }
 
@@ -26,8 +26,8 @@ const MultipleInputs = () => {
         <form className="form">
         
             <div className="form-control mt-3 mb-3">
-                <label htmlFor="firstName">Name : </label>
-                <input type="text" id="firstName" name="firstName" value={person.firstName} onChange={handleOnchange}></input>
+                <label htmlFor="firstName1">Name : </label>
+                <input type="text" id="firstName1" name="firstName1" value={person.firstName1} onChange={handleOnchange}></input>
             </div>
 
             <div className="form-control mb-3">
@@ -41,8 +41,8 @@ const MultipleInputs = () => {
             </div>
 
             <div className="form-control">
-                <label htmlFor="email">Email : </label>
-                <input type="email" id="email" name="email" value={person.email} onChange={handleOnchange}></input>
+                <label htmlFor="email1">Email1 : </label>
+                <input type="email1" id="email1" name="email1" value={person.email1} onChange={handleOnchange}></input>
             </div>
 
             <button onClick={handleSubmit} className="btn btn-outline-success btn-sm mt-2" type="submit">Add Person</button>
@@ -50,11 +50,11 @@ const MultipleInputs = () => {
         </form>
 
         {people.map((person) => {
-            const {id, firstName, secondName, age, email} =person;
+            const {id, firstName1, secondName, age, email1} =person;
             return (
                 <div className="mt-3">
-                <p>{email}</p>
-                <h3>{firstName}</h3>
+                <p>{email1}</p>
+                <h3>{firstName1}</h3>
                     <h4>{secondName}</h4>
                     <h2>{age}</h2>
                     <p className="text-muted"><small>{id}</small></p>

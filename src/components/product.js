@@ -1,11 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import './practise/practise.css';
 import defaultImage from '../assets/default-image.jpg';
 
 const Product = ({image,name,price}) => {
     const ifImage = image && image.url;
-    console.log(image,name,price);
     return(
 
         <article className="product">
@@ -15,11 +14,11 @@ const Product = ({image,name,price}) => {
         </article>
     )
 }
-    Product.propTypes = {
-        image:PropTypes.object.isRequired,
-        name:PropTypes.string.isRequired,
-        image:PropTypes.number.isRequired,
-    };
+    // Product.propTypes = {
+    //     image:PropTypes.object.isRequired,
+    //     name:PropTypes.string.isRequired,
+    //     price:PropTypes.number.isRequired,
+    // };
 
     // Product.defaultProps = {
     //     name : 'default name',

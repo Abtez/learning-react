@@ -1,6 +1,5 @@
 import React, {useState, useContext} from 'react';
 import {data} from '../data'
-import { Link } from 'react-router-dom';
 
 
 const PersonContext = React.createContext();
@@ -41,7 +40,6 @@ const ContextApi = () => {
 
     const SinglePerson = ({id,name}) => {
         const {removePerson} = useContext(PersonContext);
-        console.log(data);
         return(
 
             // <div>

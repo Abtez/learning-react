@@ -6,7 +6,6 @@ import StateCount from './practise/practise'
 import UseEffectBasic from './practise/practise2'
 import UseEffectCleanUp from './practise/practise3'
 import MultipleReturn from './practise/practise4'
-import ShortCircuit from './practise/practise5'
 import ShowHide from './practise/practise6'
 import ControlledInput from './practise/practise7'
 import MultipleInputs from './practise/practise8'
@@ -16,7 +15,6 @@ import Example from './practise/practise11'
 import Index from './practise/practise12'
 import UseEffectGit from './git/git'
 import ReactRouterSetup from './router';
-// import './global.css'
 
 
 export const books = [
@@ -56,18 +54,19 @@ const App = () => {
 
     return ( 
 
-        
-
-        
-
-        
-
-
-
-
-
-
         <div className="container">
+
+        <div>
+            <StateCount />
+        </div>
+
+        <div>
+            <UseEffectBasic />
+        </div>
+
+        <div>
+            <UseEffectCleanUp />
+        </div>
 
         <div>
             <Index />
@@ -103,10 +102,6 @@ const App = () => {
         </div>
 
             <div>
-                <ShortCircuit />
-            </div>
-
-            <div>
             <MultipleReturn />
             </div>
 
@@ -121,8 +116,6 @@ const App = () => {
             <section className="booklist">
 
             {books.map( (book) => {
-
-                const {img, title, author} = book;
 
                 return <Booklist key={book.id} book={book} />
 
