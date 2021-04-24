@@ -1,0 +1,29 @@
+.book{
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+}
+
+.book h5{
+    margin-top: 0.5rem;
+}
+
+.book h6{
+    color: rgb(174, 0, 255);
+    letter-spacing: 4px;
+}
+
+.booklist{
+    width: 90vw;
+    max-width: 1170px;
+    margin: 5rem auto;
+    display: grid;
+    gap: 2rem;
+    /* display: none; */
+}
+
+@media screen and ( min-width:768px ) {
+    .booklist{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
